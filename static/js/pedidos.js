@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    const linhasRecentes = document.querySelectorAll('.linha-recente');
+    const linhasRecentes = document.querySelectorAll('.list-panel__row');
     linhasRecentes.forEach(linha => {
         linha.addEventListener('click', function() {
-            const idPedido = this.querySelector('.id').innerText;
+            const idPedido = this.querySelector('.list-panel__cell--bold').innerText;
             const cliente = this.querySelector('.cliente').innerText;
             console.log('Abrindo detalhes do pedido #' + idPedido + ' - Cliente: ' + cliente);
          
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const btnVerTodos = document.querySelector('.ver-todos');
+    const btnVerTodos = document.querySelector('.list-panel__link');
     if (btnVerTodos) {
         btnVerTodos.addEventListener('click', function(e) {
             e.preventDefault();
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    const cards = document.querySelectorAll('.card-pedido');
+    const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.backgroundColor = '#ececec';
@@ -29,8 +29,5 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.backgroundColor = '#F4F1F1';
         });
     });
-
-
-
 
 });

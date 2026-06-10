@@ -1,15 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
    
-    const linhas = document.querySelectorAll('.tabela-estoque tbody tr');
+    const linhas = document.querySelectorAll('.data-table tbody tr');
     linhas.forEach(linha => {
         linha.addEventListener('click', function() {
-            const nomeProduto = this.querySelector('.coluna-produto span').innerText;
+            const nomeProduto = this.querySelector('.data-table__product-cell span').innerText;
             console.log('Produto selecionado: ' + nomeProduto);
             
         });
     });
 
-    const cards = document.querySelectorAll('.card-resumo');
+    const cards = document.querySelectorAll('.card-summary');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-5px)';
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    const btnMenu = document.querySelector('.btn-menu');
+    const btnMenu = document.querySelector('.navbar__toggle');
     if (btnMenu) {
         btnMenu.addEventListener('click', function() {
             console.log('Menu lateral recolhido/expandido');
