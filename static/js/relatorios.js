@@ -13,8 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const tituloRelatorio = document.querySelector('.card-grafico-grande h3');
+    if (tituloRelatorio) {
+        tituloRelatorio.addEventListener('click', function() {
+            console.log('Preparando exportação do ' + this.innerText);
+            alert('Exportando ' + this.innerText + ' para PDF...');
+        });
+    }
 
-
-
-
+    console.log('Página de relatórios inicializada.');
 });
