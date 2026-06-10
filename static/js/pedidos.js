@@ -11,6 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const btnVerTodos = document.querySelector('.ver-todos');
+    if (btnVerTodos) {
+        btnVerTodos.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log('Navegando para a lista completa de pedidos...');
+        });
+    }
+
+
+
 
 
 
