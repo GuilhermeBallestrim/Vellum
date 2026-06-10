@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELLUM - Recuperar senha </title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>VELLUM</h1>
+    </header>
+
+    <main class="conteudo">
+        <div class="caixa-login">
+            <!-- ---------------------------------------------------------------------------------->
+            <section class="sessao-login">
+                <h2>Cliente Recorrente</h2>
+                <p class="aviso">* Campos Obrigatórios</p>
+
+                <form id="formularioLogin">
+                    <div class="campo">
+                        <label for="email">E-mail *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="acoes">
+                        <a href="" id="botaoEsqueci" class="link-esqueci">Esqueceu sua Senha?</a>
+                        <button type="submit" class="botao-azul">Próximo</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- ------------------------------------------------------------------------------------------------------>
+            <div class="linha-separadora"></div>
+
+            <section class="sessao-cadastro">
+                <h2>Criar Conta</h2>
+                <p>Ao criar uma conta, você tera os seguintes beneficios:</p>
+                <ul>
+                    <li>Gerenciar os detalhe de sua conta</li>
+                    <li>Acessar histórico de pedidos</li>
+                    <li>Solicitar devoluções facilmente</li>
+                    <li>Descobrir a ultimas atualizaçoes da Vellum</li>
+                </ul>
+                <button class="botao-cinza">Criar Conta</button>
+            </section>
+        </div>
+
+        <!-- ----------------------------------------------------------------------------------------------->
+        <div id="painelSenha" class="painel-lateral">
+            <div class="painel-interno">
+                <div class="topo-painel">
+                    <h3>Redefinir Senha</h3>
+                    <button id="botaoFechar" class="fechar">&times;</button>
+                </div>
+
+                <p>
+                    Por favor, forneça o endereço de e-mail da sua conta.
+                    Enviaremos um e-mail com um link de redefinição.
+                </p>
+
+                <p class="aviso">* Campos Obrigatórios</p>
+
+                <form id="formularioSenha">
+                    <div class="campo">
+                        <label for="emailSenha">E-mail *</label>
+                        <input type="email" id="emailSenha" name="emailSenha" required>
+                    </div>
+                    <button type="submit" class="botao-preto">Próximo</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ------------------------------------------------------------------------------------------>
+        <div id="fundoEscuro" class="fundo-escuro"></div>
+    </main>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
