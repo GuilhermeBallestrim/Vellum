@@ -23,6 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-
+    const linksMenu = document.querySelectorAll('.navegacao a');
+    linksMenu.forEach(link => {
+        link.addEventListener('click', function() {
+            linksMenu.forEach(l => l.classList.remove('item-ativo'));
+            this.classList.add('item-ativo');
+        });
+    });
 
 });
