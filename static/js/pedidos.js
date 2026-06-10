@@ -19,7 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
+    const cards = document.querySelectorAll('.card-pedido');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.backgroundColor = '#ececec';
+            this.style.transition = '0.2s';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.backgroundColor = '#F4F1F1';
+        });
+    });
 
 
 
