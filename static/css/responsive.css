@@ -1,0 +1,89 @@
+/* ==========================================================================
+   MEDIA QUERIES E RESPONSIVIDADE COLETIVA
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .grid-layout--three-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1100px) {
+    .columns-layout {
+        flex-direction: column;
+    }
+
+    .columns-layout__left {
+        width: 100%;
+    }
+
+    .columns-layout__vertical-cards {
+        flex-direction: row;
+    }
+
+    .card-summary {
+        flex: 1;
+    }
+
+    .grid-layout--relatorios,
+    .grid-layout--vendas,
+    .grid-layout--clientes {
+        grid-template-columns: 1fr;
+    }
+
+    .card--span-two {
+        grid-column: span 1;
+    }
+
+    .page-header--vendas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .pie-chart {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pie-chart--vendas {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid-layout--estoque {
+        flex-direction: column;
+        /* Para compatibilidade com o antigo contêiner de cards */
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar__logo-subtitle,
+    .sidebar__nav-link,
+    .sidebar__profile-info {
+        display: none;
+    }
+
+    .app-content {
+        margin-left: 70px;
+    }
+}
+
+@media (max-width: 800px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .divider-line {
+        height: 1px;
+        width: 100%;
+        margin: 40px 0;
+    }
+
+    .side-panel {
+        width: 100%;
+        right: -100%;
+    }
+}

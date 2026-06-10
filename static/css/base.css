@@ -1,0 +1,100 @@
+/* ==========================================================================
+   VARIABLES (:root) & RESET
+   ========================================================================== */
+
+:root {
+    /* Cores Institucionais e Principais */
+    --color-primary: #052175;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-bg-gray: #F4F1F1;
+    --color-bg-light: #f9f9f9;
+
+    /* Cores de Texto */
+    --color-text-main: #333333;
+    --color-text-dark: #444444;
+    --color-text-medium: #555555;
+    --color-text-muted: #666666;
+    --color-text-light: #888888;
+    --color-text-shadow: #999999;
+
+    /* Bordas e Divisores */
+    --color-border-light: #eeeeee;
+    --color-border-medium: #eee;
+    --color-border-dark: #cccccc;
+    --color-border-split: #E0E0E0;
+    --color-border-grid: #ddd;
+
+    /* Paleta de Cores dos Gráficos */
+    --chart-blue-1: #2979ff;
+    --chart-blue-2: #448aff;
+    --chart-blue-3: #82b1ff;
+    --chart-blue-4: #3d5afe;
+    --chart-blue-5: #1a237e;
+    --chart-blue-light: #bbdefb;
+    --chart-red: #ff5252;
+    --chart-pink: #ff4081;
+    --chart-yellow: #ffd740;
+    --chart-green: #69f0ae;
+
+    /* Status e Alertas */
+    --status-success-bg: #b9f6ca;
+    --status-success-bg-alt: #c8e6c9;
+    --status-success-text: #2e7d32;
+    --status-success-dark: #1b5e20;
+    --status-success-light: #4caf50;
+    --status-success-soft: #e8f5e9;
+    --status-danger-bg: #ffcdd2;
+    --status-danger-text: #c62828;
+    --status-danger-main: #dc3545;
+    --status-warning-bg: #ffe0b2;
+    --status-warning-text: #ef6c00;
+    --status-brown-bg: #d7ccc8;
+    --status-brown-text: #5d4037;
+    --status-bege-bg: #f5f5dc;
+    --status-bege-text: #8d6e63;
+    --status-purple-bg: #4a148c;
+    --status-slate-bg: #37474f;
+
+    /* Tipografia */
+    --font-primary: Arial, sans-serif;
+    --font-heading: 'IM Fell Double Pica', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-white);
+    color: var(--color-text-main);
+    font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3,
+th {
+    font-family: var(--font-heading);
+}
+
+/* Listas globais herdadas de style.css */
+ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+ul li {
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+}
