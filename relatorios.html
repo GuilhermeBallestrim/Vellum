@@ -5,47 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLUM - Relatórios</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
-    <div class="container-geral">
+    <div class="app-layout">
 
-        <aside class="barra-lateral">
-            <div class="logo-topo">
-                <h1>VELLUM</h1>
-                <p>MODA SOCIAL MASCULINA</p>
+        <aside class="sidebar">
+            <div class="sidebar__logo">
+                <h1 class="sidebar__logo-title">VELLUM</h1>
+                <p class="sidebar__logo-subtitle">MODA SOCIAL MASCULINA</p>
             </div>
 
-            <nav class="menu-nav">
-                <a href="dashboard.html">DASHBOARD</a>
-                <a href="vendas.html">VENDAS</a>
-                <a href="estoque.html">ESTOQUES</a>
-                <a href="pedidos.html">PEDIDOS</a>
-                <a href="clientes.html">CLIENTES</a>
-                <a href="relatorios.html" class="ativo">RELATÓRIOS</a>
-                <a href="settings.html">CONFIGURAÇÕES</a>
+            <nav class="sidebar__nav">
+                <a href="dashboard.html" class="sidebar__nav-link">DASHBOARD</a>
+                <a href="vendas.html" class="sidebar__nav-link">VENDAS</a>
+                <a href="estoque.html" class="sidebar__nav-link">ESTOQUES</a>
+                <a href="pedidos.html" class="sidebar__nav-link">PEDIDOS</a>
+                <a href="clientes.html" class="sidebar__nav-link">CLIENTES</a>
+                <a href="relatorios.html" class="sidebar__nav-link sidebar__nav-link--active">RELATÓRIOS</a>
+                <a href="settings.html" class="sidebar__nav-link">CONFIGURAÇÕES</a>
             </nav>
 
-            <div class="perfil-rodape">
-                <img src="" alt="User" class="avatar">
-                <div class="user-info">
-                    <span class="nome">JOHN WAYNE</span>
-                    <span class="cargo">Administrador</span>
+            <div class="sidebar__profile">
+                <img src="" alt="User" class="sidebar__profile-avatar">
+                <div class="sidebar__profile-info">
+                    <span class="sidebar__profile-name">JOHN WAYNE</span>
+                    <span class="sidebar__profile-role">Administrador</span>
                 </div>
             </div>
         </aside>
 
 
-        <main class="conteudo-relatorios">
+        <main class="app-content">
 
-            <header class="topo-acoes">
-                <div class="busca-area">
-                    <button class="btn-menu">☰</button>
+            <header class="navbar">
+                <div class="search-bar">
+                    <button class="navbar__toggle">☰</button>
                     <span class="icone-busca">🔍</span>
                 </div>
-                <div class="perfil-topo">
+                <div class="navbar__actions">
                     <span class="sino">🔔</span>
-                    <div class="user-dropdown">
+                    <div class="navbar__user">
                         <img src="" alt="User">
                         <span>JOHN WAYNE</span>
                         <small>▼</small>
@@ -54,51 +58,59 @@
             </header>
 
 
-            <div class="layout-relatorios">
-                <div class="caixa-titulo">
-                    <h2>RELATÓRIOS</h2>
+            <div class="grid-layout">
+                <div class="page-header page-header--relatorios">
+                    <h2 class="page-header__title">RELATÓRIOS</h2>
                 </div>
 
-                <div class="grade-relatorios">
-                    <div class="card-branco card-grafico-grande">
+                <div class="grid-layout grid-layout--relatorios">
+                    <div class="card card--white card-grafico-grande">
                         <h3>RELATÓRIO DE VENDAS P/ ANO</h3>
-                        <div class="conteudo-grafico">
-                            <div class="pizza-container">
-                                <div class="grafico-pizza">
-                                    <div class="fatia fatia-1"><span>30,0%</span></div>
-                                    <div class="fatia fatia-2"><span>20,0%</span></div>
-                                    <div class="fatia fatia-3"><span>25,0%</span></div>
-                                    <div class="fatia fatia-4"><span>12,5%</span></div>
-                                    <div class="fatia fatia-5"><span>12,5%</span></div>
+                        <div class="pie-chart">
+                            <div class="pie-chart__container">
+                                <div class="pie-chart__canvas">
+                                    <div class="pie-chart__slice pie-chart__slice--1"><span>30,0%</span></div>
+                                    <div class="pie-chart__slice pie-chart__slice--2"><span>20,0%</span></div>
+                                    <div class="pie-chart__slice pie-chart__slice--3"><span>25,0%</span></div>
+                                    <div class="pie-chart__slice pie-chart__slice--4"><span>12,5%</span></div>
+                                    <div class="pie-chart__slice pie-chart__slice--5"><span>12,5%</span></div>
                                 </div>
                             </div>
-                            <div class="legenda-grafico">
-                                <div class="item-legenda"><span class="cor azul-claro"></span> 20000 Vendas - 2026</div>
-                                <div class="item-legenda"><span class="cor azul-medio"></span> 30000 Vendas - 2025</div>
-                                <div class="item-legenda"><span class="cor azul-roxo"></span> 12500 Vendas - 2024</div>
-                                <div class="item-legenda"><span class="cor azul-escuro"></span> 12500 Vendas - 2023
-                                </div>
-                                <div class="item-legenda"><span class="cor azul-marinho"></span> 25000 Vendas - 2022
-                                </div>
+                            <div class="pie-chart__legend">
+                                <div class="pie-chart__legend-item"><span
+                                        class="pie-chart__color-dot pie-chart__color-dot--azul-claro"></span> 20000
+                                    Vendas - 2026</div>
+                                <div class="pie-chart__legend-item"><span
+                                        class="pie-chart__color-dot pie-chart__color-dot--azul-medio"></span> 30000
+                                    Vendas - 2025</div>
+                                <div class="pie-chart__legend-item"><span
+                                        class="pie-chart__color-dot pie-chart__color-dot--azul-roxo"></span> 12500
+                                    Vendas - 2024</div>
+                                <div class="pie-chart__legend-item"><span
+                                        class="pie-chart__color-dot pie-chart__color-dot--azul-escuro"></span> 12500
+                                    Vendas - 2023</div>
+                                <div class="pie-chart__legend-item"><span
+                                        class="pie-chart__color-dot pie-chart__color-dot--azul-marinho"></span> 25000
+                                    Vendas - 2022</div>
                             </div>
                         </div>
                     </div>
-                    <div class="coluna-cards">
-                        <div class="card-branco card-estatistica">
+                    <div class="columns-layout__vertical-cards">
+                        <div class="card card--white card-estatistica">
                             <p class="label-estatistica">PRODUTO MAIS VENDIDO</p>
                             <div class="valor-estatistica">
                                 <span>Camisa Social Branca</span>
                                 <strong>12000</strong>
                             </div>
                         </div>
-                        <div class="card-branco card-estatistica">
+                        <div class="card card--white card-estatistica">
                             <p class="label-estatistica">PRODUTO MENOS VENDIDO</p>
                             <div class="valor-estatistica">
                                 <span>Terno Azul Marinho Clássico</span>
                                 <strong>3000</strong>
                             </div>
                         </div>
-                        <div class="card-branco card-estatistica">
+                        <div class="card card--white card-estatistica">
                             <p class="label-estatistica">VENDA DE PRODUTOS P/ MÊS</p>
                             <div class="valor-estatistica">
                                 <span>Terno Azul Marinho Clássico</span>
