@@ -20,7 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.transform = 'translateY(0)';
         });
     });
-
-  
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    if (btnMenu) {
+        btnMenu.addEventListener('click', function() {
+            console.log('Menu lateral recolhido/expandido');
+        });
+    }
 
 });
