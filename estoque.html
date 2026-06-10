@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLUM - Estoques</title>
-    <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estoque.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
-    <div class="container-geral">
-      
-        <aside class="barra-lateral">
-            <div class="logo-topo">
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar__logo">
                 <h1>VELLUM</h1>
-                <p>MODA SOCIAL MASCULINA</p>
+                <p class="sidebar__logo-subtitle">MODA SOCIAL MASCULINA</p>
             </div>
-            
-            <nav class="menu-nav">
-                <a href="dashboard.html">DASHBOARD</a>
-                <a href="vendas.html">VENDAS</a>
-                <a href="estoque.html" class="ativo">ESTOQUES</a>
-                <a href="pedidos.html">PEDIDOS</a>
-                <a href="clientes.html">CLIENTES</a>
-                <a href="relatorios.html">RELATÓRIOS</a>
-                <a href="settings.html">CONFIGURAÇÕES</a>
+
+            <nav class="sidebar__nav">
+                <a href="dashboard.html" class="sidebar__nav-link">DASHBOARD</a>
+                <a href="vendas.html" class="sidebar__nav-link">VENDAS</a>
+                <a href="estoque.html" class="sidebar__nav-link sidebar__nav-link--active">ESTOQUES</a>
+                <a href="pedidos.html" class="sidebar__nav-link">PEDIDOS</a>
+                <a href="clientes.html" class="sidebar__nav-link">CLIENTES</a>
+                <a href="relatorios.html" class="sidebar__nav-link">RELATÓRIOS</a>
+                <a href="settings.html" class="sidebar__nav-link">CONFIGURAÇÕES</a>
             </nav>
- <!-- ------------------------------------------------------------------------------------------------------------------------>
-<div class="perfil-baixo">
-                <img src="" alt="User" class="img-perfil">
-                <div class="info-user">
-                    <span class="nome">JOHN WAYNE</span>
-                    <span class="cargo">Administrador</span>
+            <div class="sidebar__profile">
+                <img src="" alt="User" class="sidebar__profile-avatar">
+                <div class="sidebar__profile-info">
+                    <span class="sidebar__profile-name">JOHN WAYNE</span>
+                    <span class="sidebar__profile-role">Administrador</span>
                 </div>
             </div>
         </aside>
-        
-        <main class="conteudo-estoque">
-<!-- ------------------------------------------------------------------------------------------------------------------------>
- <header class="topo-pagina">
-                <div class="barra-busca">
-                    <button class="btn-menu">☰</button>
+
+        <main class="app-content">
+            <header class="navbar">
+                <div class="search-bar">
+                    <button class="navbar__toggle">☰</button>
                     <span class="icone-busca">🔍</span>
                 </div>
-                <div class="topo-direita">
+                <div class="navbar__actions">
                     <span class="notificacao">🔔</span>
-                    <div class="user-topo">
+                    <div class="navbar__user">
                         <img src="" alt="User">
                         <span>JOHN WAYNE</span>
                         <small>▼</small>
@@ -52,46 +54,44 @@
                 </div>
             </header>
 
-            
-            <section class="resumo-estoque">
-                <div class="titulo-secao">
-                    <h2>ESTOQUES</h2>
+
+            <section class="grid-layout">
+                <div class="page-header">
+                    <h2 class="page-header__title">ESTOQUES</h2>
                 </div>
 
- <!----------------------------------------------------------------------------->
-<div class="cards-container">
-                    <div class="card-resumo">
-                        <p class="label-card">TOTAL DE PRODUTOS</p>
-                        <div class="valor-card">
+                <div class="card__info grid-layout--estoque">
+                    <div class="card-summary">
+                        <p class="card-summary__label">TOTAL DE PRODUTOS</p>
+                        <div class="card-summary__value-container">
                             <span class="icone-azul">📦</span>
-                            <span class="numero">300</span>
-                            <span class="porcentagem positiva">↑ 2,5%</span>
+                            <span class="card-summary__number">300</span>
+                            <span class="card-summary__percentage card-summary__percentage--positive">↑ 2,5%</span>
                         </div>
                     </div>
-                    
-                    <div class="card-resumo">
-                        <p class="label-card">ESTOQUE BAIXO</p>
-                        <div class="valor-card">
+
+                    <div class="card-summary">
+                        <p class="card-summary__label">ESTOQUE BAIXO</p>
+                        <div class="card-summary__value-container">
                             <span class="icone-alerta">⚠️</span>
-                            <span class="numero">74</span>
-                            <span class="porcentagem negativa">↓ 10%</span>
+                            <span class="card-summary__number">74</span>
+                            <span class="card-summary__percentage card-summary__percentage--negative">↓ 10%</span>
                         </div>
                     </div>
-                    
-                    <div class="card-resumo">
-                        <p class="label-card">SEM ESTOQUE</p>
-                        <div class="valor-card">
+
+                    <div class="card-summary">
+                        <p class="card-summary__label">SEM ESTOQUE</p>
+                        <div class="card-summary__value-container">
                             <span class="icone-erro">❌</span>
-                            <span class="numero">3</span>
-                            <span class="porcentagem positiva">↑ 2</span>
+                            <span class="card-summary__number">3</span>
+                            <span class="card-summary__percentage card-summary__percentage--positive">↑ 2</span>
                         </div>
                     </div>
                 </div>
             </section>
-<!-- ------------------------------------------------------------------------------------------------------------------------>
-   <section class="lista-produtos">
+            <section class="card">
                 <div class="tabela-container">
-                    <table class="tabela-estoque">
+                    <table class="data-table">
                         <thead>
                             <tr>
                                 <th>PRODUTOS</th>
@@ -102,48 +102,48 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="coluna-produto">
+                                <td class="data-table__product-cell">
                                     <img src="" alt="Gravata">
                                     <span>Gravata Azul Marinho</span>
                                 </td>
                                 <td>50</td>
-                                <td><span class="status em-estoque">EM ESTOQUE</span></td>
+                                <td><span class="badge badge--in-stock">EM ESTOQUE</span></td>
                                 <td>R$679,99</td>
                             </tr>
                             <tr>
-                                <td class="coluna-produto">
+                                <td class="data-table__product-cell">
                                     <img src="" alt="Sapato">
                                     <span>Sapato Social Preto</span>
                                 </td>
                                 <td>0</td>
-                                <td><span class="status sem-estoque">SEM ESTOQUE</span></td>
+                                <td><span class="badge badge--out-of-stock">SEM ESTOQUE</span></td>
                                 <td>R$2799,99</td>
                             </tr>
                             <tr>
-                                <td class="coluna-produto">
+                                <td class="data-table__product-cell">
                                     <img src="" alt="Camisa">
                                     <span>Camisa Social Branca</span>
                                 </td>
                                 <td>117</td>
-                                <td><span class="status em-estoque">EM ESTOQUE</span></td>
+                                <td><span class="badge badge--in-stock">EM ESTOQUE</span></td>
                                 <td>R$1099,99</td>
                             </tr>
                             <tr>
-                                <td class="coluna-produto">
+                                <td class="data-table__product-cell">
                                     <img src="" alt="Terno">
                                     <span>Terno Cinza Grafite Slim</span>
                                 </td>
                                 <td>13</td>
-                                <td><span class="status estoque-baixo">ESTOQUE BAIXO</span></td>
+                                <td><span class="badge badge--low-stock">ESTOQUE BAIXO</span></td>
                                 <td>R$3300,00</td>
                             </tr>
                             <tr>
-                                <td class="coluna-produto">
+                                <td class="data-table__product-cell">
                                     <img src="" alt="Terno">
                                     <span>Terno Azul Marinho Clássico</span>
                                 </td>
                                 <td>52</td>
-                                <td><span class="status em-estoque">EM ESTOQUE</span></td>
+                                <td><span class="badge badge--in-stock">EM ESTOQUE</span></td>
                                 <td>R$3149,99</td>
                             </tr>
                         </tbody>
@@ -152,10 +152,7 @@
             </section>
         </main>
     </div>
- <!-- ------------------------------------------------------------------------------------------------------------------------>
-
     <script src="../js/estoque.js"></script>
 </body>
-</html>           
-          
-                
+
+</html>
