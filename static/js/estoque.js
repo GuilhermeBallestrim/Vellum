@@ -10,6 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const cards = document.querySelectorAll('.card-resumo');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-5px)';
+            this.style.transition = '0.3s';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+
   
 
 });
