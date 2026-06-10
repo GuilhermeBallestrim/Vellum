@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function abrirPainel(evento) {
         evento.preventDefault(); 
-        painelSenha.classList.add('aberto');
-        fundoEscuro.classList.add('visivel');
+        painelSenha.classList.add('side-panel--open');
+        fundoEscuro.classList.add('backdrop--visible');
         document.body.style.overflow = 'hidden';
     }
     
     function fecharPainel() {
-        painelSenha.classList.remove('aberto');
-        fundoEscuro.classList.remove('visivel');
+        painelSenha.classList.remove('side-panel--open');
+        fundoEscuro.classList.remove('backdrop--visible');
         document.body.style.overflow = 'auto';
     }
     
