@@ -15,12 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
-
-
-
-
-
+    const switches = document.querySelectorAll('input[type="checkbox"]');
+    switches.forEach(sw => {
+        sw.addEventListener('click', function() {
+            const status = this.checked ? 'ativada' : 'desativada';
+            console.log('Notificação ' + status);
+        });
+    });
 
 
 
