@@ -8,5 +8,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    const btnAdicionar = document.querySelector('.btn-azul-pequeno');
+    if (btnAdicionar) {
+        btnAdicionar.addEventListener('click', function() {
+            alert('Abrindo formulário para novo membro da equipe...');
+        });
+    }
+
+
+
+
+
+
+
+
+
 
 });
