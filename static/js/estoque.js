@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
    
     const linhas = document.querySelectorAll('.tabela-estoque tbody tr');
     linhas.forEach(linha => {
