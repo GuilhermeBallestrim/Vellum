@@ -13,5 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    const linhasHistorico = document.querySelectorAll('.tabela-historico tbody tr');
+    linhasHistorico.forEach(linha => {
+        linha.addEventListener('click', function() {
+            const idPedido = this.querySelector('td:first-child').innerText;
+            console.log('Abrindo detalhes do pedido: ' + idPedido);
+            alert('Visualizando detalhes do pedido ' + idPedido);
+        });
+    });
+
+    console.log('Página de detalhes do cliente carregada.');
 
 });
