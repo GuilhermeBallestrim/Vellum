@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLUM - Vendas</title>
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/components.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
 </head>
 
 <body>
     <div class="app-layout">
         <aside class="sidebar">
             <div class="sidebar__logo">
-                <h1>VELLUM</h1>
+                <h1 class="sidebar__logo-title">VELLUM</h1>
                 <p class="sidebar__logo-subtitle">MODA SOCIAL MASCULINA</p>
             </div>
             <nav class="sidebar__nav">
@@ -27,6 +27,7 @@
                 <a href="relatorios.html" class="sidebar__nav-link">RELATÓRIOS</a>
                 <a href="settings.html" class="sidebar__nav-link">CONFIGURAÇÕES</a>
             </nav>
+
             <div class="sidebar__profile">
                 <img src="" alt="User" class="sidebar__profile-avatar">
                 <div class="sidebar__profile-info">
@@ -35,7 +36,9 @@
                 </div>
             </div>
         </aside>
-        <main class="app-content">
+
+        <main class="app-content app-content--gray-bg">
+
             <header class="navbar">
                 <div class="search-bar">
                     <button class="navbar__toggle">☰</button>
@@ -50,7 +53,10 @@
                     </div>
                 </div>
             </header>
+
+
             <div class="grid-layout">
+
                 <div class="navbar page-header--vendas">
                     <div class="page-header">
                         <h2 class="page-header__title">VENDAS</h2>
@@ -71,6 +77,7 @@
                         <span class="card-summary__icon">💵</span>
                     </div>
                 </div>
+
                 <div class="grid-layout grid-layout--vendas">
                     <div class="card card--white">
                         <div class="card__header">
@@ -160,7 +167,7 @@
             </div>
         </main>
     </div>
-    <script src="vendas-script.js"></script>
+    <script src="static/js/vendas.js"></script>
 </body>
 
 </html>
