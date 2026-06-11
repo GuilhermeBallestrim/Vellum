@@ -1,50 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLUM - Dashboard</title>
-    <link href="" rel="stylesheet">
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-<body>
-    <div class="container-geral">
 
-        <aside class="barra-lateral">
-            <div class="logo-topo">
+<body>
+    <div class="app-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar__logo">
                 <h1>VELLUM</h1>
-                <p>MODA SOCIAL MASCULINA</p>
+                <p class="sidebar__logo-subtitle">MODA SOCIAL MASCULINA</p>
             </div>
 
-            <nav class="menu-nav">
-                <a href="dashboard.html" class="ativo">DASHBOARD</a>
-                <a href="vendas.html">VENDAS</a>
-                <a href="estoque.html">ESTOQUES</a>
-                <a href="pedidos.html">PEDIDOS</a>
-                <a href="clientes.html">CLIENTES</a>
-                <a href="relatorios.html">RELATÓRIOS</a>
-                <a href="settings.html">CONFIGURAÇÕES</a>
+            <nav class="sidebar__nav">
+                <a href="dashboard.html" class="sidebar__nav-link sidebar__nav-link--active">DASHBOARD</a>
+                <a href="vendas.html" class="sidebar__nav-link">VENDAS</a>
+                <a href="estoque.html" class="sidebar__nav-link">ESTOQUES</a>
+                <a href="pedidos.html" class="sidebar__nav-link">PEDIDOS</a>
+                <a href="clientes.html" class="sidebar__nav-link">CLIENTES</a>
+                <a href="relatorios.html" class="sidebar__nav-link">RELATÓRIOS</a>
+                <a href="settings.html" class="sidebar__nav-link">CONFIGURAÇÕES</a>
             </nav>
 
-            <div class="perfil-rodape">
-                <img src="" alt="User" class="avatar">
-                <div class="user-info">
-                    <span class="nome">JOHN WAYNE</span>
-                    <span class="cargo">Administrador</span>
+            <div class="sidebar__profile">
+                <img src="" alt="User" class="sidebar__profile-avatar">
+                <div class="sidebar__profile-info">
+                    <span class="sidebar__profile-name">JOHN WAYNE</span>
+                    <span class="sidebar__profile-role">Administrador</span>
                 </div>
             </div>
         </aside>
 
-        <main class="conteudo-principal">
-            <header class="topo-acoes">
-                <div class="busca-area">
-                    <button class="btn-menu">☰</button>
+        <main class="app-content app-content--gray-bg">
+            <header class="navbar">
+                <div class="search-bar">
+                    <button class="navbar__toggle">☰</button>
                     <span class="icone-busca">🔍</span>
                 </div>
 
-                <div class="perfil-topo">
+                <div class="navbar__actions">
                     <span class="sino">🔔</span>
-                    <div class="user-dropdown">
+                    <div class="navbar__user">
                         <img src="" alt="User">
                         <span>JOHN WAYNE</span>
                         <small>▼</small>
@@ -52,107 +56,133 @@
                 </div>
             </header>
 
-            <div class="grade-dashboard">
-                
-                <div class="card-branco card-vendas">
-                    <div class="topo-card">
-                        <h3>Dashboard</h3>
+            <div class="grid-layout grid-layout--three-cols">
+
+                <div class="card card--white">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Dashboard</h3>
                         <span>...</span>
                     </div>
 
-                    <div class="lista-vendas">
-                        <div class="item-venda azul">
-                            <span class="icone">🛍️</span>
-                            <div class="texto">
+                    <div class="list-panel__container">
+                        <div class="dashboard-colored-item dashboard-colored-item--blue">
+                            <span class="dashboard-colored-item__icon">🛍️</span>
+                            <div class="dashboard-colored-item__text">
                                 <p>Vendas de Hoje</p>
                                 <small>Vendas</small>
                             </div>
-
-                            <span class="valor">38</span>
+                            <span class="dashboard-colored-item__value">38</span>
                         </div>
-                        <div class="item-venda verde">
-                            <span class="icone">💲</span>
-                            <div class="texto">
+                        <div class="dashboard-colored-item dashboard-colored-item--green">
+                            <span class="dashboard-colored-item__icon">💲</span>
+                            <div class="dashboard-colored-item__text">
                                 <p>Faturamento de Hoje</p>
                                 <small>Resumo</small>
                             </div>
-                            <span class="valor">R$ 6.750,00</span>
+                            <span class="dashboard-colored-item__value">R$ 6.750,00</span>
                         </div>
-                        <div class="item-venda roxo">
-                            <span class="icone">👥</span>
-                            <div class="texto">
+                        <div class="dashboard-colored-item dashboard-colored-item--purple">
+                            <span class="dashboard-colored-item__icon">👥</span>
+                            <div class="dashboard-colored-item__text">
                                 <p>Novos Clientes</p>
                             </div>
-                            <span class="valor">67</span>
+                            <span class="dashboard-colored-item__value">67</span>
                         </div>
-                        <div class="item-venda cinza">
-                            <span class="icone">🚚</span>
-                            <div class="texto">
+                        <div class="dashboard-colored-item dashboard-colored-item--gray">
+                            <span class="dashboard-colored-item__icon">🚚</span>
+                            <div class="dashboard-colored-item__text">
                                 <p>Produtos em Estoque</p>
                                 <small>Produtos</small>
                             </div>
-                            <span class="valor">367</span>
+                            <span class="dashboard-colored-item__value">367</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="card-branco">
-                    <div class="topo-card">
-                        <h3>Dashboard</h3>
-                        <a href="#" class="link-ver">Todos</a>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Dashboard</h3>
+                        <a href="#" class="card__link">Todos</a>
                     </div>
-                    <table class="tabela-simples">
+                    <table class="data-table data-table--simple">
                         <thead>
                             <tr>
                                 <th>Nomes</th>
-                                <th>Tamanhos</th>
+                                <th>TamanSizes</th>
                                 <th>Cor</th>
                                 <th>Total</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>Terno Cinza Grafite Slim</td><td>P</td><td>Cinza</td><td>9</td></tr>
-                            <tr><td>Camisa Social Branca</td><td>G</td><td>Branco</td><td>7</td></tr>
-                            <tr><td>Gravata Azul Marinho</td><td>-</td><td>Azul Marinho</td><td>25</td></tr>
-                            <tr><td>Sapato Social Preto</td><td>-</td><td>Preto</td><td>32</td></tr>
-                            <tr><td>Terno Azul Marinho Clássico</td><td>M</td><td>Azul Marinho</td><td>17</td></tr>
+                            <tr>
+                                <td>Terno Cinza Grafite Slim</td>
+                                <td>P</td>
+                                <td>Cinza</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>Camisa Social Branca</td>
+                                <td>G</td>
+                                <td>Branco</td>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <td>Gravata Azul Marinho</td>
+                                <td>-</td>
+                                <td>Azul Marinho</td>
+                                <td>25</td>
+                            </tr>
+                            <tr>
+                                <td>Sapato Social Preto</td>
+                                <td>-</td>
+                                <td>Preto</td>
+                                <td>32</td>
+                            </tr>
+                            <tr>
+                                <td>Terno Azul Marinho Clássico</td>
+                                <td>M</td>
+                                <td>Azul Marinho</td>
+                                <td>17</td>
+                            </tr>
                         </tbody>
-                        </table>
-                    <div class="badge-estoque">
+                    </table>
+                    <div class="badge--floating-alert">
                         <span>🎁</span>
                         <small>Nível de Estoque</small>
                     </div>
                 </div>
 
-                <div class="card-branco">
-                    <div class="topo-card">
-                        <h3>Controle de Estoque</h3>
-                        <a href="#" class="link-ver">Ver Todos</a>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Controle de Estoque</h3>
+                        <a href="#" class="card__link">Ver Todos</a>
                     </div>
-                    <div class="conteudo-alerta">
-                        <div class="grafico-circular">
+                    <div class="alert-circle-block">
+                        <div class="alert-circle-block__graph">
                             <span class="porcentagem">70%</span>
                         </div>
-                        <div class="texto-alerta">
+                        <div class="alert-circle-block__text">
                             <p><strong>Produto em Baixo Estoque!</strong></p>
                             <p>A Camisa Social Branca (Tam: M) está com 2 unidades em estoque.</p>
-                            <button class="btn-verificar">Verificar</button>
+                            <button class="btn btn--blue-small">Verificar</button>
                         </div>
+                    </div>
+                    <div class="divider-line--horizontal"></div>
+                    <div class="alert-circle-block">
+                        <div class="alert-circle-block__text">
+                            <p><strong>Ajuste de Roupa Pronto</strong></p>
+                            <p>Os ajustes realizados no terno azul marinho clássico estão prontos para retirada.</p>
+                            <button class="btn btn--blue-small">Verificar</button>
                         </div>
-                    <div class="divisor"></div>
-                    <div class="conteudo-alerta">
-                        <p><strong>Ajuste de Roupa Pronto</strong></p>
-                        <p>Os ajustes realizados no terno azul marinho clássico estão prontos para retirada.</p>
-                        <button class="btn-verificar">Verificar</button>
                     </div>
                 </div>
 
-                <div class="card-branco">
-                    <div class="topo-card">
-                        <h3>Listas de Pedidos</h3>
-                        <a href="#" class="link-ver">Ver Todos</a>
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Listas de Pedidos</h3>
+                        <a href="#" class="card__link">Ver Todos</a>
                     </div>
-                    <table class="tabela-pedidos">
+                    <table class="data-table data-table--simple">
                         <thead>
                             <tr>
                                 <th>Número</th>
@@ -161,22 +191,47 @@
                                 <th>Valor</th>
                                 <th>Status</th>
                             </tr>
-                            </thead>
+                        </thead>
                         <tbody>
-                            <tr><td>1468</td><td>🛒 Miguel Azul</td><td>16/02/2026</td><td>R$ 300,00</td><td><span class="status verde">Entregue</span></td></tr>
-                            <tr><td>1467</td><td>🛒 Wayne John</td><td>27/02/2026</td><td>-</td><td><span class="status marrom">Ajuste</span></td></tr>
-                            <tr><td>1466</td><td>🛒 Joao Blanco</td><td>24/2/2026</td><td>-</td><td><span class="status bege">Em Separação</span></td></tr>
-                            <tr><td>1465</td><td>🛒 Alves Joao</td><td>24/2/2026</td><td>-</td><td><span class="status verde-claro">Separado</span></td></tr>
+                            <tr>
+                                <td>1468</td>
+                                <td>🛒 Miguel Azul</td>
+                                <td>16/02/2026</td>
+                                <td>R$ 300,00</td>
+                                <td><span class="badge badge--compact badge--status-green">Entregue</span></td>
+                            </tr>
+                            <tr>
+                                <td>1467</td>
+                                <td>🛒 Wayne John</td>
+                                <td>27/02/2026</td>
+                                <td>-</td>
+                                <td><span class="badge badge--compact badge--status-brown">Ajuste</span></td>
+                            </tr>
+                            <tr>
+                                <td>1466</td>
+                                <td>🛒 Joao Blanco</td>
+                                <td>24/2/2026</td>
+                                <td>-</td>
+                                <td><span class="badge badge--compact badge--status-bege">Em Separação</span></td>
+                            </tr>
+                            <tr>
+                                <td>1465</td>
+                                <td>🛒 Alves Joao</td>
+                                <td>24/2/2026</td>
+                                <td>-</td>
+                                <td><span class="badge badge--compact badge--status-light-green">Separado</span></td>
+                            </tr>
                         </tbody>
                     </table>
                     <a href="#" class="ver-mais-link">Ver Todos ></a>
                 </div>
-                <div class="card-branco">
-                    <div class="topo-card">
-                        <h3>Listas de Pedidos</h3>
-                        <a href="#" class="link-ver">Ver Todos</a>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Listas de Pedidos</h3>
+                        <a href="#" class="card__link">Ver Todos</a>
                     </div>
-                    <table class="tabela-contatos">
+                    <table class="data-table data-table--simple">
                         <thead>
                             <tr>
                                 <th>Telefone</th>
@@ -185,33 +240,50 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>11 999999999</td><td>azulmiguel@gmail.com</td><td>Ontem</td></tr>
-                            <tr><td>11 999999999</td><td>waynejohn@gmail.com</td><td>Há 2 dias</td></tr>
-                            <tr><td>11 999999999</td><td>joaoblanco@gmail.com</td><td>Há 4 dias</td></tr>
-                            <tr><td>11 999999999</td><td>joaoalves@gmail.com</td><td>Há 1 semana</td></tr>
+                            <tr>
+                                <td>11 999999999</td>
+                                <td>azulmiguel@gmail.com</td>
+                                <td>Ontem</td>
+                            </tr>
+                            <tr>
+                                <td>11 999999999</td>
+                                <td>waynejohn@gmail.com</td>
+                                <td>Há 2 dias</td>
+                            </tr>
+                            <tr>
+                                <td>11 999999999</td>
+                                <td>joaoblanco@gmail.com</td>
+                                <td>Há 4 dias</td>
+                            </tr>
+                            <tr>
+                                <td>11 999999999</td>
+                                <td>joaoalves@gmail.com</td>
+                                <td>Há 1 semana</td>
+                            </tr>
                         </tbody>
                     </table>
                     <a href="#" class="ver-mais-link">Ver Todos ></a>
                 </div>
-                <div class="card-branco">
-                    <div class="topo-card">
-                        <h3>Notificações</h3>
-                        <a href="#" class="link-ver">Ver Todos</a>
+
+                <div class="card">
+                    <div class="card__header">
+                        <h3 class="card__title card__title--dashboard">Notificações</h3>
+                        <a href="#" class="card__link">Ver Todos</a>
                     </div>
-                    <div class="item-notificacao">
-                        <span class="icone-notif">📦</span>
-                        <div class="texto-notif">
+                    <div class="notification-row">
+                        <span class="notification-row__icon">📦</span>
+                        <div class="notification-row__text">
                             <p><strong>Produto em baixo estoque</strong></p>
                             <p>A camisa social (Tam: M) está com 2 unidades em estoque.</p>
-                            <button class="btn-verificar">Verificar</button>
+                            <button class="btn btn--blue-small">Verificar</button>
                         </div>
                     </div>
-                    <div class="item-notificacao">
-                        <img src="" class="img-notif">
-                        <div class="texto-notif">
+                    <div class="notification-row">
+                        <img src="" class="notification-row__img">
+                        <div class="notification-row__text">
                             <p><strong>Ajuste de Roupa Pronto</strong></p>
                             <p>Os ajustes do terno azul marinho clássico estão prontos para retirada.</p>
-                            <button class="btn-verificar">Verificar</button>
+                            <button class="btn btn--blue-small">Verificar</button>
                         </div>
                     </div>
                 </div>
@@ -222,4 +294,5 @@
 
     <script src="js/dashboard.js"></script>
 </body>
+
 </html>
