@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const botaoFechar = document.getElementById('botaoFechar');
     const painelSenha = document.getElementById('painelSenha');
     const fundoEscuro = document.getElementById('fundoEscuro');
+    const btnCriarConta = document.getElementById('btnCriarConta');
+    const submitEntraConta = document.getElementById('submitEntraConta');
     
     function abrirPainel(evento) {
         evento.preventDefault(); 
@@ -23,6 +25,18 @@ document.addEventListener('DOMContentLoaded', function() {
     botaoFechar.addEventListener('click', fecharPainel);
     
     fundoEscuro.addEventListener('click', fecharPainel);
+    
+    if (btnCriarConta) {
+        btnCriarConta.addEventListener('click', function() {
+            window.location.href = 'dashboard.html';
+        });
+    }
+
+    if (submitEntraConta) {
+        submitEntraConta.addEventListener('click', function() {
+            window.location.href = 'dashboard.html';
+        });
+    }
     
     document.getElementById('formularioLogin').addEventListener('submit', function(e) {
         e.preventDefault();
