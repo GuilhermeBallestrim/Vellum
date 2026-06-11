@@ -5,50 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VELLUM - Configurações</title>
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="static/css/base.css">
+    <link rel="stylesheet" href="static/css/layout.css">
+    <link rel="stylesheet" href="static/css/components.css">
+    <link rel="stylesheet" href="static/css/responsive.css">
 </head>
 
 <body>
     <div class="app-layout">
-
         <aside class="sidebar">
             <div class="sidebar__logo">
-                <h1 class="sidebar__logo-title sidebar__logo-title--large">VELLUM</h1>
-                <p class="sidebar__logo-subtitle sidebar__logo-subtitle--spaced">GESTÃO INTELIGENTE</p>
+                <h1 class="sidebar__logo-title">VELLUM</h1>
+                <p class="sidebar__logo-subtitle">MODA SOCIAL MASCULINA</p>
             </div>
-
             <nav class="sidebar__nav">
-                <a href="dashboard.html" class="sidebar__nav-link sidebar__nav-link--large">DASHBOARD</a>
-                <a href="vendas.html" class="sidebar__nav-link sidebar__nav-link--large">VENDAS</a>
-                <a href="estoque.html" class="sidebar__nav-link sidebar__nav-link--large">ESTOQUE</a>
-                <a href="pedidos.html" class="sidebar__nav-link sidebar__nav-link--large">PEDIDOS</a>
-                <a href="clientes.html" class="sidebar__nav-link sidebar__nav-link--large">CLIENTES</a>
-                <a href="relatorios.html" class="sidebar__nav-link sidebar__nav-link--large">RELATÓRIOS</a>
-                <a href="settings.html"
-                    class="sidebar__nav-link sidebar__nav-link--large sidebar__nav-link--active">CONFIGURAÇÕES</a>
+                <a href="dashboard.html" class="sidebar__nav-link">DASHBOARD</a>
+                <a href="vendas.html" class="sidebar__nav-link">VENDAS</a>
+                <a href="estoque.html" class="sidebar__nav-link">ESTOQUES</a>
+                <a href="pedidos.html" class="sidebar__nav-link">PEDIDOS</a>
+                <a href="clientes.html" class="sidebar__nav-link">CLIENTES</a>
+                <a href="relatorios.html" class="sidebar__nav-link">RELATÓRIOS</a>
+                <a href="settings.html" class="sidebar__nav-link sidebar__nav-link--active">CONFIGURAÇÕES</a>
             </nav>
-            <div class="sidebar__profile sidebar__profile--darker">
-                <img src="" alt="Avatar" class="sidebar__profile-avatar">
+            <div class="sidebar__profile">
+                <img src="" alt="User" class="sidebar__profile-avatar">
                 <div class="sidebar__profile-info">
-                    <span class="sidebar__profile-name sidebar__profile-name--large">Wayne John</span>
-                    <span class="sidebar__profile-role sidebar__profile-role--large">Administrador</span>
+                    <span class="sidebar__profile-name">JOHN WAYNE</span>
+                    <span class="sidebar__profile-role">Administrador</span>
                 </div>
             </div>
         </aside>
         <main class="app-content app-content--settings">
 
-            <header class="navbar navbar--settings">
-                <div class="search-bar search-bar--white search-bar--fixed-width">
+            <header class="navbar">
+                <div class="search-bar">
                     <button class="navbar__toggle">☰</button>
-                    <input type="text" class="search-bar__input" placeholder="Pesquisar...">
+                    <span class="icone-busca">🔍</span>
                 </div>
                 <div class="navbar__actions">
-                    <span class="notificacao">🔔</span>
-                    <div class="navbar__user navbar__user--large">
+                    <span class="sino">🔔</span>
+                    <div class="navbar__user">
                         <img src="" alt="User">
                         <span>JOHN WAYNE</span>
                         <small>▼</small>
@@ -181,7 +177,7 @@
         </main>
     </div>
 
-    <script src="../js/settings.js"></script>
+    <script src="static/js/settings.js"></script>
 </body>
 
 </html>
